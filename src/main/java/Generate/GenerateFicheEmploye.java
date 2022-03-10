@@ -47,7 +47,7 @@ public class GenerateFicheEmploye {
         htmlWriter.write("\n");
         htmlWriter.write("<li><img src='../assets/logo.png' alt='Logo'></li>");
         htmlWriter.write("\n");
-        htmlWriter.write("<li><a href='accueil.html' class='accueil'>Accueil</a></li>");
+        htmlWriter.write("<li><a href='../index.html' class='accueil'>Accueil</a></li>");
         htmlWriter.write("\n");
         htmlWriter.write("</ul>");
         htmlWriter.write("\n");

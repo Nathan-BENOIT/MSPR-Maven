@@ -12,7 +12,7 @@ public class GenerateAccueil {
         List<String> listEmployes = Parsing.StaffParsing();
 
         // HTML
-        File htmlSortant = new File("src/main/resources/HTML/accueil.html");
+        File htmlSortant = new File("src/main/resources/index.html");
 
         htmlSortant.getParentFile().mkdirs();
 
@@ -27,9 +27,9 @@ public class GenerateAccueil {
         htmlWriter.write("<title>Go Secury | Accueil gestion des agents");
         htmlWriter.write("</title>");
         htmlWriter.write("\n");
-        htmlWriter.write("<link rel='icon' href='../assets/icon.png' type='image/x-icon'>");
+        htmlWriter.write("<link rel='icon' href='assets/icon.png' type='image/x-icon'>");
         htmlWriter.write("\n");
-        htmlWriter.write("<link href='../CSS/style.css' rel='stylesheet'>");
+        htmlWriter.write("<link href='CSS/style.css' rel='stylesheet'>");
         htmlWriter.write("\n");
         htmlWriter.write("<link rel='preconnect' href='https://fonts.googleapis.com'>");
         htmlWriter.write("\n");
@@ -43,13 +43,13 @@ public class GenerateAccueil {
         htmlWriter.write("\n");
         htmlWriter.write("<ul>");
         htmlWriter.write("\n");
-        htmlWriter.write("<li><img src='../assets/logo.png' alt='Logo'></li>");
+        htmlWriter.write("<li><img src='assets/logo.png' alt='Logo'></li>");
         htmlWriter.write("\n");
         htmlWriter.write("</ul>");
         htmlWriter.write("\n");
         htmlWriter.write("<div class='Entete'>");
         htmlWriter.write("\n");
-        htmlWriter.write("<img src='../assets/logo.png' alt='Logo'>");
+        htmlWriter.write("<img src='assets/logo.png' alt='Logo'>");
         htmlWriter.write("\n");
         htmlWriter.write("<h1>Portail de gestion des agents");
         htmlWriter.write("</h1>");
@@ -64,7 +64,7 @@ public class GenerateAccueil {
 
         for(int i = 0; i < listEmployes.size(); i++){
             List<String> listAgent = Parsing.personalParsing(listEmployes.get(i));
-            htmlWriter.write("<a href='fiche_employe_" + listEmployes.get(i) + ".html' class='texte'>" + listAgent.get(1) + " " + listAgent.get(0) + "</a></br></br>");
+            htmlWriter.write("<a href='HTML/fiche_employe_" + listEmployes.get(i) + ".html' class='texte'>" + listAgent.get(1) + " " + listAgent.get(0) + "</a></br></br>");
             htmlWriter.write("\n");
         }
 
